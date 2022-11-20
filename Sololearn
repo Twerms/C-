@@ -14,3 +14,58 @@ int main() {
     
     return 0;
 }
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    double items[] = {500, 12.4, 94, 45, 3, 81, 1000.9, 85, 90, 1, 35};
+    
+    int percent;
+    for (int x=0; x<11; x++) {
+        cin >> percent;
+        cout << items[x]-items[x]*percent/100 << " ";
+    }
+    
+    return 0;
+}
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+    cin>>n; //size of the array
+    int nums = 0;
+    int max = nums;
+    for(int i=0; i<n; i++) {
+        cin >> nums;
+        if(nums > max)
+            max = nums;
+    }
+    cout << max;
+
+    return 0;
+}
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int ages[5];
+
+    for (int i = 0; i < 5; ++i) {
+        cin >> ages[i];
+    }
+    float youngest = ages[0];
+    for (int a = 0; a < 5; a++) {
+        if(youngest>ages[a]){
+            youngest = ages[a];
+        }
+    }
+    
+    float price = 50 - (50*youngest/100);
+    cout << price;
+    
+    return 0;
+}

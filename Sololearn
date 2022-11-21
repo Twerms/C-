@@ -69,3 +69,28 @@ int main() {
     
     return 0;
 }
+
+#include <iostream>
+using namespace std;
+
+int max(int num1, int num2) {
+    int high;
+    if (num1 > num2) {
+        high = num1;
+    }
+    else {
+        high = num2;
+    }
+    return high;
+}
+
+int main() {
+    int first;
+    cin >> first;
+    int second;
+    cin >> second;
+
+    cout << max(first, second);
+    
+    return 0;
+}

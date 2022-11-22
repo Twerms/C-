@@ -94,3 +94,55 @@ int main() {
     
     return 0;
 }
+
+#include <iostream>
+#include <cstdlib>
+using namespace std;
+
+
+int main() {
+    srand(0);
+    int range;
+    cin >> range;
+    int PIN[4];
+    for (int x=0; x<4; x++) {
+        PIN[x] = 1+(rand() % range);
+    }
+    cout <<PIN[0] <<PIN[1] <<PIN[2] <<PIN[3] <<endl;
+    return 0;
+}
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+void printOrder(string myorder = "Black tea") {
+    cout << myorder << endl;
+}
+
+int main() {
+    string friendOrder;
+    cin >> friendOrder;
+    printOrder();
+    printOrder(friendOrder);
+    
+    return 0;
+}
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+void add(int x, int y) {
+    cout << x + y << endl;
+}
+void add(double x, double y) {
+    cout << x + y << endl;
+}
+
+int main() {
+    add(5,6);
+    add(1.2, 6.5);
+    
+    return 0;
+}

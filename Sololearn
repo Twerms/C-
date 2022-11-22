@@ -146,3 +146,24 @@ int main() {
     
     return 0;
 }
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+void winners(string customers[], int size, int n) {
+    for (int i = (n-1); i < size; i+=n) {
+        cout << customers[i] << endl;
+    }
+}
+
+int main() {
+
+    string customers[] = {"Alice", "Bob", "Rayan", "Emma", "Ann", "Bruce", "Synthia", "Daniel", "Richard", "Sam", "Nick", "Mary", "Paul"};
+    int n;
+    cin >> n;
+    winners(customers, 13, n);
+    
+    return 0;
+}
+

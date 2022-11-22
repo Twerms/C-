@@ -167,3 +167,23 @@ int main() {
     return 0;
 }
 
+#include <iostream>
+using namespace std;
+
+void promotion(int *megabytes) {
+    
+    int multiplier;
+    cin >> multiplier;
+    *megabytes = *megabytes * multiplier;
+}
+
+int main() {
+    int megabytes;
+    cin >> megabytes;
+    cout << "Before the promotion: " << megabytes << endl;
+    promotion(&megabytes);
+    
+    cout << "After the promotion: " << megabytes << endl;
+    
+    return 0;
+}

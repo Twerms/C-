@@ -31,3 +31,66 @@ public:
         return result;
     }
 };
+
+class Solution {
+public:
+    string longestCommonPrefix(vector<string>& strs) {
+        //prefix = first word of strs vector
+        string prefix = strs[0];
+        for (int x = 1; x < strs.size(); x++) {
+            //current = rest of the words past prefix
+            string current = strs[x];
+            int y = 0;
+            while (y < current.size() && y < prefix.size() && current[y] == prefix[y]) {
+                y++;
+            }
+            prefix = prefix.substr(0, y);
+            if (prefix.empty()) {
+                return "";
+            }
+        }
+        return prefix;
+    }
+};
+
+class Solution {
+public:
+    bool isPalindrome(int x) {
+        if (reversednumber(x) == x) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    };
+
+    int reversednumber(int y) {
+        int remainder = 0;
+        long reverse = 0;
+        while (y > 0) {
+            remainder = y % 10;
+            reverse = reverse *10 + remainder;
+            y/=10;
+        }
+        return reverse;
+    }
+};
+
+class Solution {
+public:
+    vector<int> twoSum(vector<int>& nums, int target) {
+        vector<int> ans;
+        for (int i = 0; i < nums.size(); i++) {
+            for (int j = i + 1; j < nums.size(); j++) {
+                if (nums[i] + nums[j] == target) {
+                    ans.push_back(i);
+                    ans.push_back(j);
+                    break;
+                }
+            }
+        }
+        return ans;
+    }
+};
+
+
